@@ -1,0 +1,153 @@
+/* =====================================
+   Café Aroma - モノクロ落ち着きデザイン
+   ===================================== */
+
+/* ベース全体 */
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  background-color: #f9f9f9;
+  color: #222;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+}
+
+/* ヘッダー */
+header {
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  padding: 1rem 2rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  letter-spacing: 0.05em;
+}
+
+/* ナビゲーション */
+nav ul {
+  list-style: none;
+  margin: 0.5rem 0 0 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #777;
+}
+
+/* メイン */
+main {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* セクションタイトル */
+h2 {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.3rem;
+  margin-top: 2rem;
+  color: #333;
+}
+
+/* メニュー部分 */
+#menu ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+#menu li {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 1rem;
+  width: calc(33% - 1rem);
+  box-sizing: border-box;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#menu li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#menu img {
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  height: auto;
+}
+
+/* 店舗テーブル */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #fff;
+  margin-top: 1.5rem;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 0.8rem;
+  text-align: left;
+}
+
+th {
+  background-color: #eee;
+}
+
+td img {
+  border-radius: 4px;
+  display: block;
+}
+
+/* フッター */
+footer {
+  background-color: #f1f1f1;
+  color: #555;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+/* 画像付き紹介部分 */
+#intro img {
+  display: block;
+  margin: 1rem auto;
+  border-radius: 8px;
+  max-width: 100%;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  #menu li {
+    width: calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  #menu li {
+    width: 100%;
+  }
+}
