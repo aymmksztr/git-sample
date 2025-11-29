@@ -135,6 +135,44 @@ footer {
   max-width: 100%;
 }
 
+/* ボタン共通スタイル */
+button {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #333;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease,
+    box-shadow 0.25s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  user-select: none;
+}
+
+/* ホバー時 */
+button:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #222;
+}
+
+/* アクティブ時 */
+button:active {
+  background-color: #e2e2e2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 無効化 */
+button:disabled {
+  background-color: #fafafa;
+  border-color: #ddd;
+  color: #aaa;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
 /* レスポンシブ対応 */
 @media (max-width: 768px) {
   #menu li {

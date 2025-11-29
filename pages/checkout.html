@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>購入手続き | Café Aroma</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="../js/checkout.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>購入手続き</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">トップ</a></li>
+          <li><a href="store.html">オンラインストア</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>お客様情報</h2>
+        <form action="complete.html" method="GET">
+          <label>お名前<br /><input type="text" name="name" required /></label
+          ><br /><br />
+          <label>住所<br /><input type="text" name="address" required /></label
+          ><br /><br />
+          <label
+            >メールアドレス<br /><input
+              type="email"
+              name="email"
+              required /></label
+          ><br /><br />
+          <button type="submit">注文を確定する</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Café Aroma</p>
+    </footer>
+  </body>
+</html>
