@@ -9,8 +9,6 @@ if (!localStorage.getItem("products")) {
   localStorage.setItem("products", JSON.stringify(initialProducts));
 }
 
-loadProducts();
-
 const productList = document.getElementById("product-list");
 
 const loadProducts = () => {
@@ -29,6 +27,9 @@ const loadProducts = () => {
     productList.appendChild(div);
   });
 };
+
+loadProducts();
+
 const getProducts = () => JSON.parse(localStorage.getItem("products"));
 
 /** カート処理 */
