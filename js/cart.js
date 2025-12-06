@@ -3,10 +3,10 @@ const saveCart = (cart) => localStorage.setItem("cart", JSON.stringify(cart));
 const cartList = document.getElementById("cart-items");
 
 const renderCart = () => {
-  nowCarts = getCart();
+  const currentCart = getCart();
   cartList.innerHTML = "";
-  if (nowCarts.length > 0) {
-    nowCarts.forEach((item) => {
+  if (currentCart.length > 0) {
+    currentCart.forEach((item) => {
       const div = document.createElement("div");
       div.innerHTML = `
       <h3>${item.name}</h3>
