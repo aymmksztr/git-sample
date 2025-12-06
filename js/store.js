@@ -38,4 +38,25 @@ const saveCart = (cart) => {
   localStorage.setItem("cart", JSON.stringify(cart));
 };
 
-const addToCart = (id, name, price) => {};
+const addToCart = (id, name, price) => {
+  /* 現在の在庫数を減らす処理 */
+  const currentProducts = getProducts();
+  product = currentProducts.find((p) => p.id === id);
+  if (product.stock <= 0) {
+    alert(`${product.name}は在庫がないため、購入できません`);
+    return;
+  }
+  product.stock -= 1;
+  localStorage.setItem("products", JSON.stringify(currentProducts));
+  loadProducts();
+
+  /* ローカルストレージにカート情報を追加 */
+  const currentCart = getCart();
+  const item = currentCart.find((p) => p.id === id);
+  if (item) {
+    item.quantity += 1;
+  } else {
+    currentCart.push({ id: id, name: name, price: price, quantity: 1 });
+  }
+  saveCart(currentCart);
+}
